@@ -1,0 +1,7 @@
+- id: post-checkout
+  name: Increase version
+  language: script
+  always_run: true
+  verbose: true
+  stages: [post-checkout]
+  entry: post-checkout.sh
