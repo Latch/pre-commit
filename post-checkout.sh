@@ -29,3 +29,5 @@ fi
 
 echo -e "${c_bold}${c_green}OK!! ${final_out}${c_reset}"
 echo -e "${c_bold}--- POST-CHECKOUT-HOOK ---${c_reset}"
+
+exit 0
