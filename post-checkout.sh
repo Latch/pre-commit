@@ -12,7 +12,7 @@ NUM_CHECKOUTS=$(git reflog --date=local | grep -c ${BRANCH_NAME})
 echo -en "\t- Increasing the version variable: Checkouts in this branch: $NUM_CHECKOUTS... "
 final_out="version NOT changed"
 
-if [[ "$1" == "$2" ]] && [[ "$3" == "1" ]] && [[ "$NUM_CHECKOUTS" == "1" ]]; then
+if [[ "$NUM_CHECKOUTS" == "1" ]]; then
   orig_version=$(grep -E 'repo_version[[:space:]]*=|module_version[[:space:]]*=' locals.tf  | cut -d '"' -f 2)
   new_version=`echo $orig_version| awk -F. -v OFS=. '{$NF += 1 ; print}' 2>/dev/null`
   if [[ $? -ne 0 ]]; then
