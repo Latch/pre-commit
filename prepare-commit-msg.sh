@@ -2,7 +2,7 @@
 # Automatically adds branch name and branch description to every commit message.
 
 echo ""
-echo " Adding branch name to beginning of the commit message... "
+echo " Adding branch name to beginning of the commit messassssge... "
 
 branchPath=$(git symbolic-ref -q HEAD)
 branchName=${branchPath##*/}    #Get text behind the last / of the branch path
