@@ -5,3 +5,10 @@
   verbose: true
   stages: [post-checkout]
   entry: post-checkout.sh
+- id: prepare-commit-msg
+  name: Prepare commit message
+  language: script
+  always_run: true
+  verbose: true
+  stages: [prepare-commit-msg]
+  entry: prepare-commit-msg.sh
