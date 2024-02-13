@@ -19,11 +19,7 @@ if [[ "$1" == "$2" ]] && [[ "$3" == "1" ]] && [[ "$NUM_CHECKOUTS" == "1" ]]; the
     echo -e "${c_bold}${c_red}FAIL!!\n\t\tERROR:${c_reset} - ${new_version}"
     return 1
   fi
-  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    cmd_out=$(sed -i "s/${orig_version}/${new_version}/" locals.tf 2>&1)
-  elif [[ "$OSTYPE" == "darwin"* ]]; then
-    cmd_out=$(sed -i '' -e "s/${orig_version}/${new_version}/" locals.tf 2>&1)
-  fi
+  cmd_out=$(sed -i '' -e "s/${orig_version}/${new_version}/" locals.tf 2>&1)
   if [[ $? -ne 0 ]]; then
     echo -e "${c_bold}${c_red}FAIL!!\n\t\tERROR:${c_reset} - ${cmd_out}"
     return 1
