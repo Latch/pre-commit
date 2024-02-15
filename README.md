@@ -1,6 +1,4 @@
 # pre-commit
-# Repository Name
-
 This repository contains scripts for pre-commit hooks.
 
 ## Usage
