@@ -5,7 +5,7 @@ This repository contains scripts for pre-commit hooks.
 
 ```
 - repo: https://github.com/Latch/pre-commit
-  rev: v1.0.0
+  rev: v1.0.2
   hooks:
   - id: prepare-commit-msg
     name: Prepare commit message
